@@ -37,7 +37,18 @@ header{
 /* text */
 a{
     text-decoration: none;
+}
+.title{
+    font-size: 72px;
+}
+.hero a{
     color: white;
+}
+.container a{
+    color: black; 
+}
+.right{
+    text-align: right;
 }
 
 /* margin */
@@ -50,9 +61,19 @@ a{
 .mt-2{
     margin-top: 20px;
 }
+.col {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 /* hero */
-.hero-image {
+.hero {
     background-image: url("img/hero.jpg");
     background-color: black;
     height: auto;
@@ -84,13 +105,115 @@ div.absolute {
     right: 16px;
 }
 
-/* .container{
+/* body container white*/
+.container{
     width: 100%;
-    height: auto; 
     min-height: 100vh;
-    padding: 70px 0;
-} */
-
+    height: auto; 
+    padding: 40px;
+}
+.container-title{
+    margin-right: auto;
+    text-align: left;
+    top: 45%;
+    left: 2%;
+    width: 60%;
+}
+.container-title-1{
+    margin-right: auto;
+    text-align: left;
+    top: 45%;
+    left: 2%;
+    width: 80%;
+}
+.music-com{
+    width: 1300px;
+    height: 600px;
+}
+/* wrapper and card  */
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper-title{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: last baseline;
+    width: 100%;
+}
+.card{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5); */
+}
+.card-item{
+    text-align: center;
+    width: 30%;
+    height: auto;
+    /* background-color: #eee; */
+    color: #222;
+    padding: 10px;
+}
+.card-img{
+    width: 300px;
+    height: 300px;
+}
+.card-title{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* body container black */
+.container-black{
+    background: black;
+    width: 100%;
+    min-height: 100vh;
+    height: auto; 
+    padding: 40px;
+}
+.title-black{
+    font-size: 72px;
+    color: white;
+}
+.wrapper-black{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+}
+.card-black{
+    display: flex;
+    width: 90%;
+    padding: 10px;
+}
+.card-item-black{
+    text-align: left;
+    width: 30%;
+    height: auto;
+    color: #222;
+    padding: 10px;
+}
+.card-img-black{
+    width: 280px;
+    height: 450px;
+}
+.card-title-black{
+    width: 70%;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+.card-description-black{
+    color: white;
+}
 
 /* footer */
 footer{
