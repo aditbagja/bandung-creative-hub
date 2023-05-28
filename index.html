@@ -6,19 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet">
     <title>Bandung Creative Hub</title>
 </head>
 <body>
-    <header>
+    <header id="home">
         <nav>
             <div class="nav-left">
                 <img src="img/logo.png" alt="logo" class="logo"/>
-                <a href="#">Event</a>
-                <a href="#">Media</a>
-                <a href="#">Studio</a>
+                <a href="#event">Event</a>
+                <a href="#media">Media</a>
+                <a href="#studio">Studio</a>
                 <div class="nav-right">
                 <a href="#">AJUKAN KEGIATAN ⭢</a>
                 </div>
@@ -28,9 +26,9 @@
 
     <div class="hero">
         <div class="hero-text">
-            <h1 class="hero-title container-title">Collaborate, Innovate, and Create at Bandung Creative Hub</h1>
+            <p class="hero-title container-title">Collaborate, Innovate, and Create at Bandung Creative <img src="img/logo-1.png" alt="hub" class="title-img"></p>
             <div class="mt-2">
-                <a href="#"><b>Reserve a studio ⭢</b></a>
+                <a href="#studio"><b>Reserve a studio ⭢</b></a>
                 <p class="mt-1">Check availability</p>
             </div> 
             <div class="hero-description absolute">
@@ -39,27 +37,27 @@
         </div>
     </div>
     
-    <div class="container">
+    <div class="container" id="event">
         <div class="wrapper-title">
-            <h1 class="title container-title">Upcoming Events at Bandung Creative Hub</h1>
-            <a href="#" class="" ><b>View All Events ⭢</b></a>
+            <p class="title container-title">Upcoming Events at Bandung Creative Hub</p>
+            <a href="#event" class="description"><b>View All Events ⭢</b></a>
         </div>
         <div class="wrapper">
             <div class="card">
                 <div class="card-item">
-                    <img src="img/game.jpg" alt="studio game" class="card-img">
+                    <img src="img/game.png" alt="studio game" class="card-img">
                     <p class="card-title">Studio Game</p>
                     <h3 class="card-title">Unity Game Development Bootcamp</h3>
                     <p>Learn about the key benefits of bootcamp, and get insight into the growing Real-time 3D industry</p>
                 </div>
                 <div class="card-item">
-                    <img src="img/kecak.jpg" alt="Auditorium" class="card-img">
+                    <img src="img/auditorium.png" alt="Auditorium" class="card-img">
                     <p class="card-title"> Auditorium</p>
                     <h3 class="card-title">Kecak & Fire Dance Show</h3>
                     <p>Witness the Spectacular Performance of Kecak Dance by Abruma dance group</p>
                 </div>
                 <div class="card-item">
-                    <img src="img/batik.jpg" alt="Studio Fashion" class="card-img">
+                    <img src="img/batik.png" alt="Studio Fashion" class="card-img">
                     <p class="card-title">Studio Fashion</p>
                     <h3 class="card-title">Batik Tulis Workshop</h3>
                     <p>Unleash Your Creativity and Learn the Art of Batik Tulis</p>
@@ -68,38 +66,89 @@
         </div>
     </div>
 
-    <div class="container-black">
-        <h1 class="title-black container-title">Media</h1>
+    <div class="container-black" id="media">
+        <div class="wrapper-title">
+            <p class="title-white container-title">Media</p>
+            <a href="https://www.youtube.com/@BandungCreativeHub/videos" class="description-white"><b>View All Media ⭢</b></a>
+        </div>
         <div class="wrapper-black">
             <div class="card-black">
                 <div class="card-item-black">
-                    <img src="img/puisi.png" alt="studio game" class="card-img-black">
-                    <h3 class="card-title-black">Mati : Sebuah Puisi</h3>
-                    <p class="card-description-black">Memperingati hari puisi sedunia</p>
+                    <a href="https://youtu.be/EDr-q-hAZnA"><img src="img/puisi.png" alt="studio game" class="card-img-black"></a>
+                    <p class="card-title-white">Mati : Sebuah Puisi</p>
+                    <p class="card-description-white">Memperingati hari puisi sedunia</p>
+                    <i class="fa-brands fa-instagram card-description-white"><p class="d-inline"> Instagram</p></i>
                 </div>
                 <div class="card-item-black">
-                    <img src="img/i love 3000.png" alt="Auditorium" class="card-img-black">
-                    <h3 class="card-title-black">I Love You 3000</h3>
-                    <p class="card-description-black">Stephanie Poetri (Cover)</p>
+                    <a href="https://youtu.be/Lp0bBVMV1SU"><img src="img/i love 3000.png" alt="Auditorium" class="card-img-black"></a>
+                    <p class="card-title-white">I Love You 3000</p>
+                    <p class="card-description-white">Stephanie Poetri (Cover)</p>
+                    <i class="fa-brands fa-youtube card-description-white"><p class="d-inline"> Youtube</p></i>
                 </div>
                 <div class="card-item-black">
-                    <img src="img/dancer.png" alt="Studio Fashion" class="card-img-black">
-                    <h3 class="card-title-black">A Day In My Life As a Dancer</h3>
-                    <p class="card-description-black">By Larasip</p>
+                    <a href="https://www.youtube.com/@BandungCreativeHub/videos"><img src="img/dancer.png" alt="Studio Fashion" class="card-img-black"></a>
+                    <p class="card-title-white">A Day In My Life As a Dancer</p>
+                    <p class="card-description-white">By Larasip</p>
+                    <i class="fa-brands fa-tiktok card-description-white"><p class="d-inline"> Tiktok</p></i>
                 </div>
                 <div class="card-item-black">
-                    <img src="img/man jasad.png" alt="Studio Fashion" class="card-img-black">
-                    <h3 class="card-title-black">Man Jasad, Musik, dan Pengaruhnya</h3>
-                    <p class="card-description-black">Interview with Man Jasad</p>
+                    <a href="https://youtu.be/iB6HFlgwEog"><img src="img/man jasad.png" alt="Studio Fashion" class="card-img-black"></a>
+                    <p class="card-title-white">Man Jasad, Musik, dan Pengaruhnya</p>
+                    <p class="card-description-white">Interview with Man Jasad</p>
+                    <i class="fa-brands fa-youtube card-description-white"><p class="d-inline"> Youtube</p></i>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="studio">
         <b>Music Studio</b>
-        <h1 class="title container-title-1">Creative Music Community and Innovate Your Sound</h1>
-        <img src="img/music.jpg" alt="music community" class="music-com">
+        <p class="title container-title-md">Creative Music Community and Innovate Your Sound</p>
+        <img src="img/music.png" alt="music community" class="img">
+        <div class="wrapper-description">
+            <p class="description container-description">Discover a world-class music studio at Bandung Creative Hub, equipped with professional-grade equipment. Our studio is more than just a place to record your music; it's a space to collaborate, innovate, and connect with like-minded individuals.</p>
+            <div class="description">
+                <a href="#event"><b>View All Events ⭢</b></a>
+                <p>Check availability</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax" style="background-image: url('img/studio\ animation.png');">
+        <div class="parallax-text">
+            <b class="description-white">Studio Animation and Game</b>
+            <p class="title-white container-title-md">A Playground for Gamers and Animators Alike</p>
+            <p class="description-white textbox-md">Our Game and Animation Studio is the perfect place for designers, developers, and enthusiasts alike to unleash their creativity and bring their ides to life. With access to cutting-edge technology and a comprehensive suite of design tools, users can create everything from simple games to comples animations with ease.</p>
+            <div class="description-white mt-2">
+                <a href="#studio">Reserve Studio ⭢</a>
+                <p>Check Availability</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <b>Dance Studio</b>
+        <p class="title container-title-md">Learn, Practice, and Perform Your Move With Us</p>
+        <img src="img/dance studio.png" alt="dance studio" class="img">
+        <div class="wrapper-description">
+            <p class="description container-description">Whether you're looking to improve your skills, learn a new style, or simply dance for fun and fitness, our studio provides a supportive and dynamic environment for you to achieve your goals. With ample space, mirrored walls, and top-quality sound systems, our studio is the perfect place to practice, rehearse, and perfect your routine.</p>
+            <div class="description">
+                <a href="#studio"><b>Reserve Studio ⭢</b></a>
+                <p>Check availability</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax" style="background-image: url('img/photography\ studio.png');">
+        <div class="parallax-text">
+            <b class="description-white">Photography Studio</b>
+            <p class="title-white container-title-md">Capture Stunning Images in Our Fully Equipped Photography Studios</p>
+            <p class="description-white textbox-md">With a range of classes, workshops, and tutorials available, we're committed to helping you perfect your craft and achieve your photography, product photography, or anything in between, out studio provides a versatile and dynamic space for you to experiment and create</p>
+            <div class="description-white mt-2">
+                <a href="#studio">Reserve Studio ⭢</a>
+                <p>Check Availability</p>
+            </div>
+        </div>
     </div>
 
     <footer>
@@ -109,7 +158,8 @@
             <i class="fa-brands fa-linkedin"></i>
             <i class="fa-brands fa-instagram"></i>
         </div>
-        <p class="copyright">&copy; 2023 Copyright: Adit</p>
+        <p class="copyright">&copy; 2023 Copyright: Six-Mavericks</p>
+        <p><a href="#home">Back To Top ↑</a></p>
     </footer>
     
 
