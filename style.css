@@ -30,7 +30,6 @@ a{
     color: white;
     font-weight: bolder;
 }
-
 .hero-title{
     font-size: 72px;
     font-weight: 500;
@@ -38,7 +37,7 @@ a{
 .hero-text {
     text-align: left;
     position: absolute;
-    top: 45%;
+    top: 30%;
     left: 2%;
     color: white;
     width: 95%;
@@ -199,7 +198,7 @@ header{
     background-image: url("img/hero.jpg");
     background-color: black;
     height: auto;
-    min-height: 680px;
+    min-height: 600px;
     background-position: 650px 50px;
     background-repeat: no-repeat; 
     background-size: 35%;
@@ -298,5 +297,3 @@ footer{
     margin-right: auto;
     letter-spacing: 4px;
 }
-
-
