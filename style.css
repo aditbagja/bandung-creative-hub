@@ -61,6 +61,13 @@ a{
     left: 2%;
     width: 50%;
 }
+.hero-title{
+    margin-right: auto;
+    text-align: left;
+    top: 45%;
+    left: 2%;
+    width: 60%;
+}
 .container-title{
     margin-right: auto;
     text-align: left;
@@ -97,6 +104,9 @@ a{
     margin-bottom: 10px;
     color: white;
     font-weight: 600;
+}
+.card-description{
+    margin-bottom: 10px;
 }
 .card-description-white{
     color: white;
@@ -226,30 +236,18 @@ div.absolute {
     height: auto; 
     padding: 40px;
 }
-.wrapper-black{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    align-items: center;
-}
-.card-black{
-    display: flex;
-    width: 90%;
-    padding: 10px;
-}
-.card-item-black{
-    text-align: left;
-    width: 30%;
-    height: auto;
-    color: #222;
-    padding: 10px;
-}
 
 /* wrapper and card  */
 .wrapper{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+}
+.wrapper-black{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
     align-items: center;
 }
 .card{
@@ -266,6 +264,18 @@ div.absolute {
     width: 30%;
     height: auto;
     /* background-color: #eee; */
+    color: #222;
+    padding: 10px;
+}
+.card-black{
+    display: flex;
+    width: 90%;
+    padding: 10px;
+}
+.card-item-black{
+    text-align: left;
+    width: 30%;
+    height: auto;
     color: #222;
     padding: 10px;
 }
@@ -296,4 +306,85 @@ footer{
 .icon-footer{
     margin-right: auto;
     letter-spacing: 4px;
+}
+
+/* media responsive */
+/* for QHD and HD resolution */
+@media screen and (min-width:960px) and (max-width: 1280px){
+    .img{
+        width: 100%;
+    }
+    .hero{
+        background-size: 60%;
+        background-position: right 60px;
+        height: 800px;
+    }
+    .container-title{
+        width: 80%;
+    }
+    .card{
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: normal;
+        gap: 40px;
+    }
+    .card-black{
+        flex-wrap: wrap;
+    }
+    .card-item{
+        width: 40%;
+    }
+    .card-item-black{
+        width: 40%;
+    }
+}
+/* Full HD Res */
+@media screen and (min-width: 1920px) and (max-width: 2560px){
+    .hero{
+        background-size: 35%;
+        background-position: 900px 80px;
+        height: 1000px;
+    }
+    .hero-title{
+        width: 60%;
+        font-size: 72px;
+        font-weight: 500;
+    }
+    .hero-text {
+        font-size: 32px;
+    }
+    .hero-description {
+        font-size: 24px;
+    }
+    .description{
+        font-size: 24px;
+    }
+    .description-white{
+        font-size: 24px;
+    }
+    .card-title{
+        font-size: 24px;
+    }
+    .card-description{
+        font-size: 24px;
+    }
+    .card-title-white{
+        font-size: 24px;
+    }
+    .card-description-white{
+        font-size: 24px;
+    }
+    .img{
+        width: 1850px;
+        height: 600px;
+    }
+    .icon-footer{
+        font-size: 24px;
+    }
+    .copyright{
+        font-size: 18px;
+    }
+    footer a{
+        font-size: 24px;
+    }
 }
