@@ -143,6 +143,16 @@ a{
     height: 600px;
     width: 34.5px;
 }
+#prevButton-white,
+#nextButton-white {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    color: white;
+    background: black;
+    align-items: center;
+    height: 50px;
+}
 .wrapper-description{
     display: flex;
     flex-wrap: wrap;
@@ -273,9 +283,10 @@ div.absolute {
 .wrapper{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    /* overflow: hidden;  */
+    overflow: hidden; 
+    width: 100%;
 }
 .wrapper-black{
     display: flex;
@@ -287,22 +298,19 @@ div.absolute {
 }
 .card{
     display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
     padding: 10px;
-    /* transition: transform 0.3s ease; */
+    transition: transform 0.3s ease;
 }
 .card-item{
+    z-index: 1;
     text-align: center;
-    width: 30%;
+    width: 35%;
     height: auto;
     color: #222;
     padding: 10px;
 }
 .card-black{
     display: flex;
-    /* width: 100%; */
     padding: 10px;
     transition: transform 0.3s ease;
 }
@@ -437,6 +445,9 @@ footer{
         background-position: 900px 80px;
         height: 1000px;
     }
+    .hero-black{
+        height: 100vh;
+    }
     .hero-title{
         width: 60%;
         font-size: 72px;
@@ -455,18 +466,15 @@ footer{
         width: 420px;
         height: 470px;
     }
-    .card-item-black{
-        width: 25%;
-    }
     .card-img-black{
         width: 300px;
         height: 600px;
     }
-    .card-img-black:hover{
+    /* .card-img-black:hover{
         width: 350px;
         height: 650px;
         transition: all .5s ease 0s;
-    }
+    } */
     .container-title-md{
         width: 60%;
     }
@@ -485,5 +493,11 @@ footer{
     }
     .nav-left a {   
         font-size: 20px;
+    }
+    #carousel-white{
+        width: 1000vh;
+    }
+    #carousel{
+        width: 1000vh;
     }
 }
