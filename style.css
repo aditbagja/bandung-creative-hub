@@ -68,6 +68,12 @@ a{
     left: 2%;
     width: 60%;
 }
+.hero-black-text{
+    position: relative;
+    top: 25%;
+    left: 2%;
+    width: 80%;
+}
 .container-title{
     margin-right: auto;
     text-align: left;
@@ -127,6 +133,16 @@ a{
     align-items: last baseline;
     width: 100%;
 }
+#prevButton,
+#nextButton {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    background: rgba(7, 7, 7, 0.377);
+    align-items: center;
+    height: 600px;
+    width: 34.5px;
+}
 .wrapper-description{
     display: flex;
     flex-wrap: wrap;
@@ -163,6 +179,11 @@ footer a{
     width: 280px;
     height: 450px;
 }
+/* .card-img-black:hover{
+    width: 300px;
+    height: 480px;
+    transition: all .5s ease 0s;
+} */
 
 /* margin */
 .mb-1{
@@ -198,6 +219,10 @@ header{
     text-decoration: none;
     font-size: 17px;
 }
+nav a:hover{
+    color: grey;
+    transition: all .5s ease 0s;
+}
 .nav-right {
     margin-left: auto;
     font-weight: bolder;
@@ -207,12 +232,19 @@ header{
 .hero {
     background-image: url("img/hero.jpg");
     background-color: black;
-    height: auto;
-    min-height: 600px;
+    height: 600px;
     background-position: 650px 50px;
     background-repeat: no-repeat; 
     background-size: 35%;
     width: 100%;
+}
+.hero-black {
+    /* background-image: url("img/hero.jpg"); */ /*disabled for manual settings*/
+    background-color: black;
+    height: 700px; 
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 70%;
 }
 div.absolute {
     position: absolute;
@@ -243,48 +275,61 @@ div.absolute {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    /* overflow: hidden;  */
 }
 .wrapper-black{
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     align-items: center;
+    overflow: hidden; 
+    width: 100%;
 }
 .card{
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     padding: 10px;
-    /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5); */
+    /* transition: transform 0.3s ease; */
 }
 .card-item{
     text-align: center;
     width: 30%;
     height: auto;
-    /* background-color: #eee; */
     color: #222;
     padding: 10px;
 }
 .card-black{
     display: flex;
-    width: 90%;
+    /* width: 100%; */
     padding: 10px;
+    transition: transform 0.3s ease;
 }
 .card-item-black{
+    z-index: 2;
     text-align: left;
-    width: 30%;
+    width: 35%;
     height: auto;
     color: #222;
     padding: 10px;
+}
+button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    padding: 5px;
 }
 
 /* parallax */
 .parallax {
     /* background-image: url("/img/studio\ animation.png"); */ /*disabled for manual set*/
     background-color: black;
-    min-height: 800px; 
+    height: 100vh; 
     background-attachment: fixed;
     background-position: right;
     background-repeat: no-repeat;
@@ -310,23 +355,26 @@ footer{
 
 /* media responsive */
 /* for QHD and HD resolution */
-@media screen and (min-width:960px) and (max-width: 1280px){
+@media screen and (max-width: 960px){
     .img{
         width: 100%;
     }
     .hero{
         background-size: 60%;
-        background-position: right 60px;
-        height: 800px;
+        background-position: right 20%;
+        height: auto;
+    }
+    .hero-black{
+        height: 100%;
     }
     .container-title{
         width: 80%;
     }
     .card{
         flex-wrap: wrap;
-        justify-content: left;
-        align-items: normal;
-        gap: 40px;
+        height: auto;
+        justify-content: baseline;
+        gap: 5%
     }
     .card-black{
         flex-wrap: wrap;
@@ -337,8 +385,52 @@ footer{
     .card-item-black{
         width: 40%;
     }
+    footer{
+        height: 10%;
+    }
 }
-/* Full HD Res */
+@media screen and (max-width: 1280px){
+    .img{
+        width: 100%;
+    }
+    .hero{
+        background-size: 60%;
+        background-position: right 20%;
+        height: 100vh;
+    }
+    .hero-black{
+        height: 120vh;
+    }
+    .container-title{
+        width: 80%;
+    }
+    .card{
+        flex-wrap: wrap;
+        height: auto;
+        gap: 5%
+    }
+    .card-black{
+        display: flex;
+    }
+    .card-item{
+        width: 40%;
+    }
+    .card-black{
+        width: auto;
+    }
+    .card-item-black{
+        width: 25%;
+    }
+    .card-img-black:hover{
+        width: 290px;
+        height: 460px;
+        transition: all .5s ease 0s;
+    }
+    footer{
+        height: 10%;
+    }
+}
+/* Full HD and 2K Resolution */
 @media screen and (min-width: 1920px) and (max-width: 2560px){
     .hero{
         background-size: 35%;
@@ -350,41 +442,48 @@ footer{
         font-size: 72px;
         font-weight: 500;
     }
+    .wrapper-title{
+        margin-bottom: 4%;
+    }
+    .card{
+        width: 92%;
+    }
+    .card-item{
+        width: 40%;
+    }
+    .card-img{
+        width: 420px;
+        height: 470px;
+    }
+    .card-item-black{
+        width: 25%;
+    }
+    .card-img-black{
+        width: 300px;
+        height: 600px;
+    }
+    .card-img-black:hover{
+        width: 350px;
+        height: 650px;
+        transition: all .5s ease 0s;
+    }
+    .container-title-md{
+        width: 60%;
+    }
     .hero-text {
         font-size: 32px;
     }
-    .hero-description {
-        font-size: 24px;
-    }
-    .description{
-        font-size: 24px;
-    }
-    .description-white{
-        font-size: 24px;
-    }
-    .card-title{
-        font-size: 24px;
-    }
-    .card-description{
-        font-size: 24px;
-    }
-    .card-title-white{
-        font-size: 24px;
-    }
-    .card-description-white{
+    b, .hero-description, .description, .description-white, .card-title, .card-description, .card-title-white, .card-description-white, .icon-footer, footer a {
         font-size: 24px;
     }
     .img{
         width: 1850px;
         height: 600px;
     }
-    .icon-footer{
-        font-size: 24px;
-    }
     .copyright{
         font-size: 18px;
     }
-    footer a{
-        font-size: 24px;
+    .nav-left a {   
+        font-size: 20px;
     }
 }
