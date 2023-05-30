@@ -10,7 +10,6 @@ const cardMarginRight = parseInt(window.getComputedStyle(cardItems[0]).marginRig
 // Set ukuran carousel sesuai dengan jumlah card item yang ditampilkan\
 // carousel.style.width = ((cardWidth + cardMarginRight) * 4 - cardMarginRight) + 'px';
 
-
 // Fungsi untuk menggeser carousel ke posisi yang ditentukan
 function slideCarousel() {
   carousel.style.transform = `translateX(-${currentPosition}px)`;
@@ -23,6 +22,7 @@ prevButton.addEventListener('click', () => {
     slideCarousel();
   }
 });
+
 
 // Event listener untuk tombol slide kanan
 nextButton.addEventListener('click', () => {
@@ -37,10 +37,16 @@ const cardItemsPerRow = getCardItemsPerRow();
 function getCardItemsPerRow() {
   if (window.innerWidth >= 1920) {
     return 5.48; 
-  } else if (window.innerWidth <= 1280) {
+  } else if (window.innerWidth >= 1251 && window.innerWidth <= 1280) {
     return 3.71; 
-  } else if (window.innerWidth >= 1281) {
+  } else if (window.innerWidth >= 1281 && window.innerWidth <= 1366) {
     return 4; 
+  } else if (window.innerWidth >= 940 && window.innerWidth <= 960){
+    return 2.66;
+  } else if (window.innerWidth == 854){
+    return 2.34;
+  } else if (window.innerWidth <= 480){
+    return 1.31;
   }
 }
 
@@ -80,6 +86,7 @@ prevButtonwhite.addEventListener('click', () => {
       slideCarouselwhite();
     }
 });
+
 nextButtonwhite.addEventListener('click', () => {
   const cardItemsPerRowWhite = getCardItemsPerRowWhite();
     if (currentPositionwhite < (cardItemswhite.length - cardItemsPerRowWhite) * (cardWidthwhite + cardMarginRightwhite)) {
@@ -95,12 +102,16 @@ const cardItemsPerRowWhite = getCardItemsPerRowWhite();
 function getCardItemsPerRowWhite() {
   if (window.innerWidth >= 1920) {
     return 4;
-  } else if (window.innerWidth >= 1227 && window.innerWidth <= 1280) {
+  } else if (window.innerWidth >= 1251 && window.innerWidth <= 1280) {
     return 3; 
   } else if (window.innerWidth >= 1281 && window.innerWidth <= 1366){
     return 3.3; 
-  } else if (window.innerWidth <= 960){
-    return 2;
+  } else if (window.innerWidth >= 940 && window.innerWidth <= 960){
+    return 2.2;
+  } else if (window.innerWidth == 854){
+    return 1.92;
+  } else if (window.innerWidth <= 480){
+    return 1.24;
   }
 }
 
@@ -114,3 +125,4 @@ window.addEventListener('resize', updateCarouselWidthWhite);
 
 // Panggil fungsi updateCarouselWidth saat halaman dimuat
 window.addEventListener('load', updateCarouselWidthWhite);
+
