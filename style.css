@@ -370,22 +370,13 @@ footer{
     .hero{
         background-size: 60%;
         background-position: right 20%;
-        height: auto;
+        height: 50em;
     }
     .hero-black{
-        height: 100%;
+        height: 65em;
     }
     .container-title{
         width: 80%;
-    }
-    .card{
-        flex-wrap: wrap;
-        height: auto;
-        justify-content: baseline;
-        gap: 5%
-    }
-    .card-black{
-        flex-wrap: wrap;
     }
     .card-item{
         width: 40%;
@@ -394,10 +385,10 @@ footer{
         width: 40%;
     }
     footer{
-        height: 10%;
+        height: 5%;
     }
 }
-@media screen and (max-width: 1280px){
+@media screen and (min-width: 1280px){
     .img{
         width: 100%;
     }
@@ -412,34 +403,12 @@ footer{
     .container-title{
         width: 80%;
     }
-    .card{
-        flex-wrap: wrap;
-        height: auto;
-        gap: 5%
-    }
-    .card-black{
-        display: flex;
-    }
-    .card-item{
-        width: 40%;
-    }
-    .card-black{
-        width: auto;
-    }
-    .card-item-black{
-        width: 25%;
-    }
-    .card-img-black:hover{
-        width: 290px;
-        height: 460px;
-        transition: all .5s ease 0s;
-    }
     footer{
         height: 10%;
     }
 }
-/* Full HD and 2K Resolution */
-@media screen and (min-width: 1920px) and (max-width: 2560px){
+/* Full HD Resolution */
+@media screen and (min-width: 1920px){
     .hero{
         background-size: 35%;
         background-position: 900px 80px;
@@ -470,11 +439,6 @@ footer{
         width: 300px;
         height: 600px;
     }
-    /* .card-img-black:hover{
-        width: 350px;
-        height: 650px;
-        transition: all .5s ease 0s;
-    } */
     .container-title-md{
         width: 60%;
     }
@@ -494,10 +458,14 @@ footer{
     .nav-left a {   
         font-size: 20px;
     }
-    #carousel-white{
-        width: 1000vh;
-    }
-    #carousel{
-        width: 1000vh;
+    #prevButton,
+    #nextButton {
+        display: flex;
+        position: relative;
+        z-index: 2;
+        background: rgba(7, 7, 7, 0.377);
+        align-items: center;
+        height: 800px;
+        width: 34.5px;
     }
 }

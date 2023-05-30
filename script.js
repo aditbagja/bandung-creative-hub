@@ -8,7 +8,8 @@ const cardWidth = cardItems[0].offsetWidth;
 const cardMarginRight = parseInt(window.getComputedStyle(cardItems[0]).marginRight);
 
 // Set ukuran carousel sesuai dengan jumlah card item yang ditampilkan\
-carousel.style.width = ((cardWidth + cardMarginRight) * 4 - cardMarginRight) + 'px';
+// carousel.style.width = ((cardWidth + cardMarginRight) * 4 - cardMarginRight) + 'px';
+
 
 // Fungsi untuk menggeser carousel ke posisi yang ditentukan
 function slideCarousel() {
@@ -25,11 +26,35 @@ prevButton.addEventListener('click', () => {
 
 // Event listener untuk tombol slide kanan
 nextButton.addEventListener('click', () => {
-  if (currentPosition < (cardItems.length - 4) * (cardWidth + cardMarginRight)) {
+  const cardItemsPerRow = getCardItemsPerRow();
+  if (currentPosition < (cardItems.length - cardItemsPerRow) * (cardWidth + cardMarginRight)) {
     currentPosition += cardWidth + cardMarginRight;
     slideCarousel();
   }
 });
+// responsive carousel
+const cardItemsPerRow = getCardItemsPerRow();
+function getCardItemsPerRow() {
+  if (window.innerWidth >= 1920) {
+    return 5.48; 
+  } else if (window.innerWidth <= 1280) {
+    return 3.71; 
+  } else if (window.innerWidth >= 1281) {
+    return 4; 
+  }
+}
+
+function updateCarouselWidth() {
+  const carouselWidth = ((cardWidth + cardMarginRight) * cardItemsPerRow - cardMarginRight) + 'px';
+  carousel.style.width = carouselWidth;
+}
+
+// Panggil fungsi updateCarouselWidth saat window di-resize
+window.addEventListener('resize', updateCarouselWidth);
+
+// Panggil fungsi updateCarouselWidth saat halaman dimuat
+window.addEventListener('load', updateCarouselWidth);
+// responsive ends
 
 
 // carousels white
@@ -42,7 +67,7 @@ let currentPositionwhite = 0;
 const cardWidthwhite = cardItemswhite[0].offsetWidth;
 const cardMarginRightwhite = parseInt(window.getComputedStyle(cardItemswhite[0]).marginRight);
 
-carouselWhite.style.width = ((cardWidthwhite + cardMarginRightwhite) * 3.3 - cardMarginRightwhite) + 'px';
+// carouselWhite.style.width = ((cardWidthwhite + cardMarginRightwhite) * 3.3 - cardMarginRightwhite) + 'px';
 
 function slideCarouselwhite() {
     carouselWhite.style.transform = `translateX(-${currentPositionwhite}px)`;
@@ -56,8 +81,36 @@ prevButtonwhite.addEventListener('click', () => {
     }
 });
 nextButtonwhite.addEventListener('click', () => {
-    if (currentPositionwhite < (cardItemswhite.length - 3) * (cardWidthwhite + cardMarginRightwhite)) {
+  const cardItemsPerRowWhite = getCardItemsPerRowWhite();
+    if (currentPositionwhite < (cardItemswhite.length - cardItemsPerRowWhite) * (cardWidthwhite + cardMarginRightwhite)) {
+
       currentPositionwhite += cardWidthwhite + cardMarginRightwhite;
       slideCarouselwhite();
     }
 });
+
+//responsive carousel white
+const cardItemsPerRowWhite = getCardItemsPerRowWhite();
+
+function getCardItemsPerRowWhite() {
+  if (window.innerWidth >= 1920) {
+    return 4;
+  } else if (window.innerWidth >= 1227 && window.innerWidth <= 1280) {
+    return 3; 
+  } else if (window.innerWidth >= 1281 && window.innerWidth <= 1366){
+    return 3.3; 
+  } else if (window.innerWidth <= 960){
+    return 2;
+  }
+}
+
+function updateCarouselWidthWhite() {
+  const carouselWidth = ((cardWidthwhite + cardMarginRightwhite) * cardItemsPerRowWhite - cardMarginRightwhite) + 'px';
+  carouselWhite.style.width = carouselWidth;
+}
+
+// Panggil fungsi updateCarouselWidth saat window di-resize
+window.addEventListener('resize', updateCarouselWidthWhite);
+
+// Panggil fungsi updateCarouselWidth saat halaman dimuat
+window.addEventListener('load', updateCarouselWidthWhite);
