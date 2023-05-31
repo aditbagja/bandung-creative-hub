@@ -13,18 +13,25 @@
 <body>
     <header id="home">
         <nav>
-            <div class="nav-left">
-                <img src="img/logo.png" alt="logo" class="logo"/>
-                <a href="#event">Event</a>
-                <a href="#media">Media</a>
-                <a href="#studio">Studio</a>
+            <img src="img/logo.png" alt="logo" class="logo" />
+            <input type="checkbox" id="menu-toggle" hidden/>
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="nav-links">
+                <div class="nav-left">
+                    <a href="#event">Event</a>
+                    <a href="#media">Media</a>
+                    <a href="#studio">Studio</a>
+                </div>
                 <div class="nav-right">
                     <a href="#">AJUKAN KEGIATAN ⭢</a>
                 </div>
             </div>
         </nav>
     </header>
-
     <div class="hero">
         <div class="hero-text">
             <p class="hero-title">Collaborate, Innovate, and Create at Bandung Creative <img src="img/logo-1.png" alt="hub" class="title-img"></p>
@@ -44,8 +51,7 @@
             <a href="#event" class="description"><b>View All Events ⭢</b></a>
         </div>
         <div class="wrapper">
-            <button id="prevButton-white">&#10094;</button>
-            <div class="card" id="carousel-white">
+            <div class="card">
                 <div class="card-item">
                     <img src="img/game.png" alt="studio game" class="card-img">
                     <p class="card-title">Studio Game</p>
@@ -77,18 +83,16 @@
                     <p class="card-description">Take your Friends and Watch Together</p>
                 </div>
             </div>
-            <button id="nextButton-white">&#10095;</button>
         </div>
     </div>
 
     <div class="container-black" id="media">
         <div class="wrapper-title">
             <p class="title-white container-title">Media</p>
-            <a href="https://www.youtube.com/@BandungCreativeHub/videos" class="text-white"><b>View All Media ⭢</b></a>
+            <a href="https://www.youtube.com/@BandungCreativeHub/videos" class="text-white description"><b>View All Media ⭢</b></a>
         </div>
         <div class="wrapper-black">
-            <button id="prevButton">&#10094;</button>
-            <div class="card-black" id="carousel">
+            <div class="card-black">
                 <div class="card-item-black">
                     <a href="https://youtu.be/EDr-q-hAZnA"><img src="img/puisi.png" alt="puisi" class="card-img-black"></a>
                     <a href="https://youtu.be/EDr-q-hAZnA"><p class="card-title-white">Mati : Sebuah Puisi</p></a>
@@ -126,7 +130,6 @@
                     <i class="fa-brands fa-youtube card-description-white"><p class="d-inline"> Youtube</p></i>
                 </div>
             </div>
-            <button id="nextButton">&#10095;</button>
         </div> 
     </div>
 
@@ -190,6 +193,7 @@
         <p class="copyright">&copy; 2023 Copyright: Six-Mavericks</p>
         <p><a href="#home">Back To Top ↑</a></p>
     </footer>
-    <script src="script.js"></script>
+    <script src="autoslider.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>

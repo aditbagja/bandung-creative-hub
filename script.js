@@ -1,3 +1,4 @@
+// card carousel black
 const carousel = document.getElementById('carousel');
 const prevButton = document.getElementById('prevButton');
 const nextButton = document.getElementById('nextButton');
@@ -60,7 +61,7 @@ window.addEventListener('resize', updateCarouselWidth);
 
 // Panggil fungsi updateCarouselWidth saat halaman dimuat
 window.addEventListener('load', updateCarouselWidth);
-// responsive ends
+// // responsive ends
 
 
 // carousels white
@@ -125,4 +126,3 @@ window.addEventListener('resize', updateCarouselWidthWhite);
 
 // Panggil fungsi updateCarouselWidth saat halaman dimuat
 window.addEventListener('load', updateCarouselWidthWhite);
-
