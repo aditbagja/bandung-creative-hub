@@ -505,12 +505,15 @@ footer{
         padding: 5%;
         background-position: center 50%;
         background-size: 100%;
-        height: 170vh;
+        height: 50em;
     }
     .hero-black-text{
         width: 100%;
         position: relative;
         top: 1%;
+    }
+    .title-white{
+        font-size: 30px;
     }
     .textbox-md{
         width: 100%;
@@ -520,7 +523,7 @@ footer{
         position: relative;
         bottom: 0px;
         right: 0px;
-        top: 70vh;
+        top: 24em;
         left: 0px;
     }
     footer a{
@@ -554,23 +557,25 @@ footer{
         opacity: 1;
     }
     .hero{
-        height: 150vh;
+        height: 50em;
         background-position: center 55%;
         background-size: 100%;
     }
+    .hero-text{
+        position: relative;
+        top: 5em;
+    }
     .hero-title{
-        margin-top: 0;
         font-size: 30px;
         width: 100%;
     }
     .title-img{
-        width: 30%;
-        height: auto;
+        width: 3em;
     }
     .absolute{
         position: relative;
         bottom: 0;
-        top: 100vh;
+        top: 28em;
         left: 0;
         padding: 0px;
         width: 100%;
@@ -611,7 +616,7 @@ footer{
     }
     .img{
         width: 100%;
-        height: fit-content;
+        height: 11em;
     }
     .container-description{
         width: 100%;
@@ -620,7 +625,7 @@ footer{
         padding: 5%;
         background-position: center;
         background-size: 100%;
-        height: 150vh;
+        height: 50em;
     }
     .hero-black-text{
         width: 100%;
@@ -635,7 +640,7 @@ footer{
         position: relative;
         bottom: 0px;
         right: 0px;
-        top: 60vh;
+        top: 23em;
         left: 0px;
         margin-top: 1.5em;
     }
@@ -650,7 +655,6 @@ footer{
         background-size: 100%;
     }
     .hero-title{
-        margin-top: 10%;
         font-size: 28px;
         width: 100%;
     }
@@ -825,22 +829,25 @@ footer{
 }
 @media (min-width: 611px) and (max-width: 767px){
     .hero{
-        height: 150vh;
-        background-position: center 60%;
-        background-size: 100vh;
+        height: 60em;
+        background-position: center 50%;
+        background-size: 100%;
+    }
+    .hero-text{
+        position: relative;
+        top: 3em;
     }
     .hero-title{
-        margin-top: 0;
-        font-size: 34px;
+        font-size: 36px;
         width: 100%;
     }
     .title-img{
-        width: 20vh;
+        width: 2.5em;
     }
     .absolute{
         position: relative;
         bottom: 0;
-        top: 100vh;
+        top: 40em;
         left: 0;
         padding: 0px;
         width: 100%;
@@ -890,12 +897,12 @@ footer{
         padding: 5%;
         background-position: center 50%;
         background-size: 100%;
-        height: 160vh;
+        height: 55em;
     }
     .hero-black-text{
         width: 100%;
         position: relative;
-        top: 5%;
+        top: 3%;
     }
     .textbox-md{
         width: 100%;
@@ -905,7 +912,7 @@ footer{
         position: relative;
         bottom: 0px;
         right: 0px;
-        top: 85vh;
+        top: 30em;
         left: 0px;
         margin-top: 1.5em;
     }
@@ -915,22 +922,21 @@ footer{
 }
 @media (min-width: 768px) and (max-width: 992px){
     .hero{
-        height: 150vh;
+        height: 50em;
         background-size: 50%;
-        background-position: 90% 10%;
+        background-position: 90% 10em;
     }
     .hero-title{
-        margin-top: 10%;
         font-size: 60px;
         width: 80%;
     }
     .title-img{
-        width: 25vh;
+        width: 2.5em;
     }
     .absolute{
         position: relative;
         bottom: 0;
-        top: 120%;
+        top: 25em;
         left: 0;
         padding: 0px;
         width: 80%;
