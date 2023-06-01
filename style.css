@@ -495,8 +495,9 @@ footer{
         font-size: 32px;
     }
     .img{
-        width: 100%;
-        height: fit-content;
+        width: 16em;
+        height: 8em;
+        object-fit: cover;
     }
     .container-description{
         width: 100%;
@@ -615,8 +616,9 @@ footer{
         font-size: 32px
     }
     .img{
-        width: 100%;
+        width: 20em;
         height: 11em;
+        object-fit: cover;
     }
     .container-description{
         width: 100%;
@@ -630,7 +632,7 @@ footer{
     .hero-black-text{
         width: 100%;
         position: relative;
-        top: 5%;
+        top: 3%;
     }
     .textbox-md{
         width: 100%;
@@ -640,9 +642,8 @@ footer{
         position: relative;
         bottom: 0px;
         right: 0px;
-        top: 23em;
+        top: 25em;
         left: 0px;
-        margin-top: 1.5em;
     }
     footer{
         flex-direction: column;
@@ -704,8 +705,9 @@ footer{
         font-size: 32px
     }
     .img{
-        width: 100%;
+        width: 24.5em;
         height: fit-content;
+        object-fit: cover;
     }
     .container-description{
         width: 100%;
@@ -749,7 +751,7 @@ footer{
         width: 100%;
     }
     .title-img{
-        width: 20vh;
+        width: 3em;
     }
     .absolute{
         position: relative;
@@ -804,7 +806,7 @@ footer{
         padding: 5%;
         background-position: center 50%;
         background-size: 100%;
-        height: 160vh;
+        height: 60em;
     }
     .hero-black-text{
         width: 100%;
@@ -819,7 +821,7 @@ footer{
         position: relative;
         bottom: 0px;
         right: 0px;
-        top: 75vh;
+        top: 30em;
         left: 0px;
         margin-top: 1.5em;
     }
@@ -925,6 +927,10 @@ footer{
         height: 50em;
         background-size: 50%;
         background-position: 90% 10em;
+    }
+    .hero-text{
+        position: relative;
+        top: 8em;
     }
     .hero-title{
         font-size: 60px;
